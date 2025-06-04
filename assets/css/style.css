@@ -1,3 +1,6 @@
+/* =========================
+   Reset & Base Styles
+   ========================= */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +13,9 @@ body {
     color: #333;
 }
 
-/* Layout Containers */
+/* =========================
+   Layout Containers
+   ========================= */
 .container {
     display: flex;
     justify-content: center;
@@ -24,7 +29,7 @@ body {
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     width: 800px;
     max-width: 90vw;
-    min-height: 500px;
+    min-height: 400px;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -35,22 +40,24 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
     min-width: 0;
-    padding: 10px;
+    padding: 32px 32px 10px 32px;
     border-bottom-left-radius: 50px;
 }
 
-/* Calculator Form */
+/* =========================
+   Calculator Form
+   ========================= */
 .calculator-form {
     flex: 1;
     display: flex;
     flex-direction: column;
     padding: 20px;
-    background-color: hsl(0, 0%, 100%);
-    color: #000000;
+    background-color: #fff;
+    color: #000;
 }
 
 .title-container {
@@ -69,17 +76,9 @@ body {
     padding: 15px 0;
 }
 
-.results h3 {
-    margin-bottom: 15px;
-}
-
-.results p {
-    padding: 10px;
-    font-size: 0.80rem;
-    color: hsl(200, 26%, 54%);
-}
-
-/* Form Layout */
+/* =========================
+   Form Layout
+   ========================= */
 .form-row {
     display: flex;
     gap: 20px;
@@ -95,7 +94,9 @@ body {
     gap: 4px;
 }
 
-/* Input with Symbol */
+/* =========================
+   Input with Symbol
+   ========================= */
 .input-with-symbol {
     position: relative;
     display: flex;
@@ -120,11 +121,38 @@ body {
     margin: 2px 0 2px 2px;
 }
 
-/* Inputs */
+.input-with-symbol.right-symbol {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-symbol.right.blue-bg {
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 0;
+    bottom: 0;
+    width: 45px;
+    background: hsl(202, 86%, 94%);
+    color: hsl(202, 55%, 16%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    pointer-events: none;
+    margin: 2px 2px 2px 0;
+}
+
+/* =========================
+   Inputs
+   ========================= */
 #mortgage-amount {
     width: 100%;
     height: 45px;
-    padding: 8px 8px 8px 56px; /* top, right, bottom, left */
+    padding: 8px 8px 8px 56px;
     border: 2px solid hsl(61, 70%, 52%);
     border-radius: 6px;
     outline: none;
@@ -132,12 +160,11 @@ body {
     box-sizing: border-box;
 }
 
-/* Mortgage Term & Interest Rate Inputs */
 #mortgage-term,
 #interest-rate {
     width: 100%;
     height: 45px;
-    padding-right: 48px; 
+    padding-right: 48px;
     border: 1px solid hsl(202, 55%, 16%);
     border-radius: 6px;
     outline: none;
@@ -147,12 +174,14 @@ body {
     background: #fff;
 }
 
-/* Mortgage Type Options */
+/* =========================
+   Mortgage Type Options
+   ========================= */
 .mortgage-type-options {
     display: flex;
-    flex-direction: column;   /* Stack vertically */
-    gap: 10px;                /* Space between buttons */
-    align-items: stretch;     /* Make buttons full width */
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
 }
 
 .mortgage-type-options label {
@@ -167,10 +196,9 @@ body {
     transition: border-color 0.2s, background 0.2s;
 }
 
-/* Highlight the entire label when its radio is checked */
 .mortgage-type-options label:has(input[type="radio"]:checked) {
-    background: hsl(61, 70%, 52%); /* light green */
-    border-color: hsl(61, 100%, 60%); /* green border for emphasis */
+    background: hsl(61, 70%, 52%);
+    border-color: hsl(61, 100%, 60%);
 }
 
 .mortgage-type-options input[type="radio"] {
@@ -178,14 +206,24 @@ body {
     margin-right: 12px;
 }
 
-/* Optional: Highlight selected button */
 .mortgage-type-options input[type="radio"]:checked + span,
 .mortgage-type-options input[type="radio"]:checked ~ span {
     color: hsl(202, 55%, 16%);
     font-weight: bold;
 }
 
-/* Results Image */
+/* =========================
+   Results Section
+   ========================= */
+.results h3 {
+    margin-bottom: 15px;
+}
+
+.results p {
+    font-size: 0.80rem;
+    color: hsl(200, 26%, 54%);
+}
+
 .results-image {
     display: block;
     margin: 0 auto 1.5rem auto;
@@ -193,7 +231,93 @@ body {
     height: 150px;
 }
 
-/* Calculate Button */
+/* Hide default message by default, show with JS */
+.default-message {
+    display: none !important;
+}
+
+/* =========================
+   Results Table
+   ========================= */
+.results-table {
+    margin-top: 2.5rem;
+    text-align: left;
+    background: hsl(202, 55%, 12%);
+    border: 1.5px solid #1e293b;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.results-table::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 6px;
+    background: #a3e635;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    z-index: 1;
+}
+
+.results-table hr {
+    border: none;
+    border-top: 1px solid #a7a7a7;
+    margin: 2.5rem 0;
+}
+
+/* =========================
+   Results Table Labels & Values
+   ========================= */
+.monthly-repayment-label {
+    font-size: 0.95rem;
+    color: #cbd5e1 !important; /* light gray */
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    padding-top: 2.5rem; /* keep or adjust as needed for spacing */
+}
+
+.total-repay-label {
+    font-size: 0.95rem;
+    color: #cbd5e1 !important; /* light gray */
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    padding-top: 2.5rem; /* keep or adjust as needed for spacing */
+}
+
+.monthly-repayment-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: hsl(61, 70%, 52%);
+    margin-bottom: 1rem;
+}
+
+.total-repay-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff !important;
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+}
+
+/* =========================
+   Results Calculation Text
+   ========================= */
+.results-calculation h3,
+.results-calculation p {
+    text-align: left;
+    margin-left: 0;
+}
+
+/* =========================
+   Buttons & Interactive Elements
+   ========================= */
 .calculate {
     display: flex;
     align-items: center;
@@ -203,12 +327,12 @@ body {
     color: hsl(202, 55%, 16%);
     border: none;
     border-radius: 25px;
-    padding: 30px 40px;    /* Increased top and bottom padding */
+    padding: 30px 40px;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
     margin-top: 40px;
-    margin-bottom: 30px;   /* Add space below the button */
+    margin-bottom: 30px;
     min-width: 300px;
 }
 
@@ -218,35 +342,13 @@ body {
     display: inline-block;
 }
 
-/* Input with symbol on the right */
-.input-with-symbol.right-symbol {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
+/* =========================
+   Utility & Misc
+   ========================= */
+.styling-words {
+    color: hsl(202, 55%, 16%) !important;
 }
 
-.input-symbol.right.blue-bg {
-    position: absolute;
-    right: 0;
-    left: auto;         
-    top: 0;
-    bottom: 0;
-    width: 45px;
-    background: hsl(202, 86%, 94%); 
-    color: hsl(202, 55%, 16%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1rem;
-    pointer-events: none;
-    margin: 2px 2px 2px 0;
+.title-container span {
+    text-decoration: underline;
 }
-
-/* Red text for troubleshooting  */
-label.styling-words {
-    color: red !important;
-    font-size: 2rem !important;
-}
-

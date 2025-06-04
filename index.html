@@ -21,12 +21,12 @@
       <div class="calculator-form">
         <div class="title-container">
           <h1>Mortgage Calculator</h1>
-          <span>Clear All</span>
+          <span class="styling-words" tabindex="0" role="button">Clear All</span>
         </div>
         
         <form action="#" method="post">
           <div class="form-group">
-            <label class="styling" for="mortgage-amount">Mortgage Amount</label>
+            <label class="styling-words" for="mortgage-amount">Mortgage Amount</label>
             <div class="input-with-symbol">
               <span class="input-symbol">$</span>
               <input type="number" id="mortgage-amount" name="mortgage-amount" required>
@@ -35,14 +35,14 @@
 
           <div class="form-row">
             <div class="form-group">
-              <label class="styling" for="mortgage-term">Mortgage Term</label>
+              <label class="styling-words" for="mortgage-term">Mortgage Term</label>
               <div class="input-with-symbol right-symbol">
                 <input type="number" id="mortgage-term" name="mortgage-term" required>
                 <span class="input-symbol right blue-bg">yrs</span>
               </div>
             </div>
             <div class="form-group">
-              <label class="styling" for="interest-rate">Interest Rate</label>
+              <label class="styling-words" for="interest-rate">Interest Rate</label>
               <div class="input-with-symbol right-symbol">
                 <input type="number" step="0.25" id="interest-rate" name="interest-rate" required>
                 <span class="input-symbol right blue-bg">%</span>
@@ -73,16 +73,39 @@
       <!-- Right box -->
       <div class="results-container">
         <div class="results">
-          <img src="./assets/images/illustration-empty.svg" alt="Results Icon" class="results-image">
-          <h3>Results shown here</h3>
-          <p class="total-repayable">
-            Complete the form and click “calculate repayments” to see what your monthly repayments would be.
-          </p>
+          <div class="default-message">
+            <img src="./assets/images/illustration-empty.svg" alt="Results Icon" class="results-image">
+            <h3>Results shown here</h3>
+            <p class="total-repayable">
+              Complete the form and click “calculate repayments” to see what your monthly repayments would be.
+            </p>
+          </div>
+          <div class="results-calculation">
+            <h3>Your results</h3>
+            <p>
+              Your results are shown below based on the information you provided. To adjust the results, edit the form and click “calculate repayments” again.
+            </p>
+            <div class="results-table">
+              <div class="monthly-repayment-label">Your monthly repayments</div>
+              <div class="monthly-repayment-value"> <!-- Large text for calculation -->
+                $1,234.56
+              </div>
+              <hr>
+              <div class="total-repay-label">Total you repay over the term</div>
+              <div class="total-repay-value"> <!-- Large text for total -->
+                $370,368.00
+              </div>
+            </div>
+
+            </div>
+          </div>
+
+          </div>
         </div>
       </div>
 
     </section>
   </main>
-
+  <script src="./assets/js/main.js"></script>
 </body>
 </html>
