@@ -288,11 +288,10 @@ body {
     color: #cbd5e1 !important; /* light gray */
     font-weight: 500;
     margin-bottom: 0.25rem;
-    padding-top: 2.5rem; /* keep or adjust as needed for spacing */
 }
 
 .monthly-repayment-value {
-    font-size: 2.5rem;
+    font-size: 2.75rem;
     font-weight: bold;
     color: hsl(61, 70%, 52%);
     margin-bottom: 1rem;
