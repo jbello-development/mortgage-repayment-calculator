@@ -1,0 +1,40 @@
+/* components.css */
+.calculate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background-color: hsl(61, 70%, 52%);
+    color: hsl(202, 55%, 16%);
+    border: none;
+    border-radius: 25px;
+    padding: 30px 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    min-width: 300px;
+}
+
+.calculate img {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
+.styling-words {
+    color: hsl(202, 55%, 16%) !important;
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title-container span {
+    text-decoration: underline;
+    cursor: pointer;
+}

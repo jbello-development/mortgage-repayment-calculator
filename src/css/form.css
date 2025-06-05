@@ -1,0 +1,99 @@
+/* form.css */
+.calculator-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #fff;
+    color: #000;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.input-with-symbol,
+.input-with-symbol.right-symbol {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.input-symbol {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 45px;
+    background: hsl(61, 70%, 52%);
+    color: hsl(0, 0%, 0%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    pointer-events: none;
+    margin: 2px 0 2px 2px;
+}
+
+.input-symbol.right.blue-bg {
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 0;
+    bottom: 0;
+    width: 45px;
+    background: hsl(202, 86%, 94%);
+    color: hsl(202, 55%, 16%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1rem;
+    pointer-events: none;
+    margin: 2px 2px 2px 0;
+}
+
+#mortgage-amount {
+    width: 100%;
+    height: 45px;
+    padding: 8px 8px 8px 56px;
+    border: 2px solid hsl(61, 70%, 52%);
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+#mortgage-term,
+#interest-rate {
+    width: 100%;
+    height: 45px;
+    padding-right: 48px;
+    border: 1px solid hsl(202, 55%, 16%);
+    border-radius: 6px;
+    outline: none;
+    padding: 8px;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.error-message {
+    color: #e11d48;
+    font-size: 0.95rem;
+    margin-top: 4px;
+    min-height: 1.2em;
+}

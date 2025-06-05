@@ -1,0 +1,33 @@
+/* media-queries.css */
+@media (max-width: 600px) {
+    .container,
+    .calculator-container {
+        flex-direction: column;
+        width: 100vw;
+        min-width: 0;
+        border-radius: 0;
+        box-shadow: none;
+        align-items: stretch;
+    }
+
+    .results-container,
+    .calculator-form {
+        padding: 16px 8px;
+        border-radius: 0;
+        min-width: 0;
+    }
+
+    .results-table {
+        padding: 0 8px;
+    }
+
+    .results-image {
+        width: 90px;
+        height: 90px;
+    }
+
+    .monthly-repayment-value,
+    .total-repay-value {
+        font-size: 1.2rem;
+    }
+}
