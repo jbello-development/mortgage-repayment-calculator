@@ -233,7 +233,7 @@ body {
 
 /* Hide default message by default, show with JS */
 .results-calculation {
-    display: none !important;
+    display: none;
 }
 
 /* =========================
