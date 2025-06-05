@@ -232,7 +232,7 @@ body {
 }
 
 /* Hide default message by default, show with JS */
-.default-message {
+.results-calculation {
     display: none !important;
 }
 

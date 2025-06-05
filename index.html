@@ -63,7 +63,7 @@
               </label>
             </div>
           </div>
-          <button type="submit" class="calculate">
+          <button type="submit" class="calculate" id="calculateButton">
             <img src="./assets/images/icon-calculator.svg" alt="" />
             Calculate Repayments
           </button>
@@ -87,13 +87,13 @@
             </p>
             <div class="results-table">
               <div class="monthly-repayment-label">Your monthly repayments</div>
-              <div class="monthly-repayment-value"> <!-- Large text for calculation -->
-                $1,234.56
+              <div class="monthly-repayment-value"> 
+                <span class="monthly-repayment-data"></span>
               </div>
               <hr>
               <div class="total-repay-label">Total you repay over the term</div>
-              <div class="total-repay-value"> <!-- Large text for total -->
-                $370,368.00
+              <div class="total-repay-value"> 
+                <span class="total-repay-data"></span>
               </div>
             </div>
 
